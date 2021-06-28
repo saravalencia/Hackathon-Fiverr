@@ -1,17 +1,18 @@
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/organisms/Navbar";
 import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Contact from "./components/pages/Contact";
 import Footer from "./components/organisms/Footer";
+import Question1 from "./components/questions/Question1";
+import Question2 from "./components/questions/Question2";
+import Question3 from "./components/questions/Question3";
 
-const App = () => {
+
+
+
+function App()  {
 
     return (
         <>
-            <header>
-                <h1>Starter template</h1>
-            </header>
             <Navbar />
             <Switch>
                 <Route
@@ -21,15 +22,27 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/about"
+                    path="/question1"
                     render={props =>
-                      <About {...props} />
+                      <Question1 {...props} />
                     }
                 />
                 <Route
-                    path="/contact"
+                    path="/question2"
                     render={props =>
-                      <Contact {...props} />
+                      <Question2 {...props} />
+                    }
+                />
+                 <Route
+                    path="/question3"
+                    render={props =>
+                      <Question3 {...props} />
+                    }
+                />
+                 <Route
+                    path="/question4"
+                    render={props =>
+                      <Question4 {...props} />
                     }
                 />
             </Switch>
