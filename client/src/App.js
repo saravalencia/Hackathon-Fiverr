@@ -1,16 +1,16 @@
 import { Switch, Route } from "react-router-dom";
-import Navbar from "./components/organisms/Navbar";
-import Home from "./components/pages/Home";
-import Footer from "./components/organisms/Footer";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 import Question1 from "./components/questions/Question1";
 import Question2 from "./components/questions/Question2";
 import Question3 from "./components/questions/Question3";
-
+import Question4 from "./components/questions/Question4";
 
 
 
 function App()  {
 
+    
     return (
         <>
             <Navbar />
@@ -21,6 +21,8 @@ function App()  {
                       <Home {...props} />
                     }
                 />
+              
+
                 <Route
                     path="/question1"
                     render={props =>
@@ -46,7 +48,7 @@ function App()  {
                     }
                 />
             </Switch>
-            <Footer />
+            
         </>
     )
 };
