@@ -7,6 +7,8 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   align-items: center;
   padding-right: 5%;
+  font-family: Domine;
+  font-weight: bold;
 
   
 
