@@ -88,7 +88,8 @@ function Home() {
         <H1>
           Find your Match!
         </H1>
-        <Select onChange={event => handleChange(event.target.value)}>
+        <Select onClick={event => handleChange(event.target.value)}>
+          
           <option value="questions-freelancer">Freelancer</option>
          
           <option value="questions" selected>Client</option>

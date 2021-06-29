@@ -114,7 +114,7 @@ function Questions() {
 				{ answerText: 'Web Dev' },
 				{ answerText: 'Graphic Design' },
 				{ answerText: 'Software Dev' },
-				{ answerText: 'E-commerce' },
+				{ answerText: 'Digital Marketing' },
 			],
 		},
 		{
@@ -145,32 +145,18 @@ function Questions() {
 			],
 		},
     {
-			questionText: 'Experince required for the job',
+			questionText: 'What kind of specialitys you need for the project',
 			answerOptions: [
-				{ answerText: '1 year' },
-				{ answerText: '2 years' },
-				{ answerText: '3 years' },
-				{ answerText: '5 +' },
+				{ answerText: 'UX UI' },
+				{ answerText: 'Animation' },
+				{ answerText: 'E-commerce' },
+				{ answerText: 'CMS systems' },
+        { answerText: 'Chat managment' },
+        { answerText: 'FinTech' },
+        { answerText: 'Websites' },
 			],
 		},
-    {
-			questionText: 'Experince required for the job',
-			answerOptions: [
-				{ answerText: '1 year' },
-				{ answerText: '2 years' },
-				{ answerText: '3 years' },
-				{ answerText: '5 +' },
-			],
-		},
-    {
-			questionText: 'Select rating on Fiverr, this just means a variation on prices',
-			answerOptions: [
-				{ answerText: '2' },
-				{ answerText: '3' },
-				{ answerText: '4' },
-				{ answerText: '5' },
-			],
-		},
+   
 	];
 
 

@@ -127,21 +127,13 @@ function QuestionsFreelance() {
 			],
 		},
 		{
-			questionText: 'Select price range of the project',
-			answerOptions: [
-				{ answerText: '€ 100 - 200' },
-				{ answerText: '€ 300 - 400' },
-				{ answerText: '€ 500 - 700' },
-				{ answerText: '€ 1000 +' },
-			],
-		},
-		{
 			questionText: 'Time expectation for the project',
 			answerOptions: [
 				{ answerText: '1 week' },
 				{ answerText: '2 weeks' },
 				{ answerText: '3 weeks' },
 				{ answerText: '1 month +' },
+        { answerText: 'To Discuss' },
 			],
 		},
     {
@@ -158,7 +150,7 @@ function QuestionsFreelance() {
 			answerOptions: [
 				{ answerText: 'Web' },
 				{ answerText: 'Mobile' },
-			
+        { answerText: 'Both' },
 			],
 		},
     {
@@ -171,7 +163,7 @@ function QuestionsFreelance() {
 			],
 		},
     {
-			questionText: 'Select skills for the project',
+			questionText: 'Select skills for the front end project',
 			answerOptions: [
 				{ answerText: 'Javascript' },
 				{ answerText: 'MySQL' },
@@ -182,6 +174,38 @@ function QuestionsFreelance() {
         { answerText: 'Angular' },
         { answerText: 'Swift' },
         { answerText: 'MongoDb' },
+        { answerText: 'Sass' },
+        { answerText: 'Styled components' },
+			],
+		},
+    {
+			questionText: 'Select skills for the back end project',
+			answerOptions: [
+				{ answerText: 'Javascript' },
+				{ answerText: 'PHP' },
+				{ answerText: 'Python' },
+        { answerText: 'Node JS' },
+        { answerText: 'C' },
+        { answerText: 'Ruby' },
+        { answerText: 'Java' },
+        { answerText: 'C#' },
+			],
+		},
+    {
+			questionText: 'Do you need a relational or not relational Database',
+			answerOptions: [
+				{ answerText: 'Relational' },
+				{ answerText: 'Not relational' },
+				
+			],
+		},
+    {
+			questionText: 'What kind of Relational Db do you need ?',
+			answerOptions: [
+				{ answerText: 'MySQL' },
+				{ answerText: 'Postgres' },
+        { answerText: 'MariaDB' },
+        { answerText: 'Oracle Sql' },
 			],
 		},
 	];
