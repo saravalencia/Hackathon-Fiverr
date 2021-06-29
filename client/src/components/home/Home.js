@@ -198,10 +198,13 @@ function Home() {
 
         </DivContainer>
         
-        <DivContainerButtom>      
+
+        <DivContainerButtom>        
+            
           
         <Button ><Link style={{textDecoration:'none', color:'black'}} to="/questions-freelancer">Freelancer</Link> </Button>
         <Button><Link  style={{textDecoration:'none', color:'black'}} to="/questions"> Client </Link>  </Button>
+         
         </DivContainerButtom>
       
 
