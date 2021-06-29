@@ -5,7 +5,8 @@ const theme = {
 		powderWhite: "#FFFDF9",
 		persianGreen: "#105e00",
 		lightBlue: "#3104b8",
-		onyx: "#36313D"
+		onyx: "#36313D",
+		fiverrGreen: "#1CBF73"
 	},
 	fontSizes: {
 		small: "1em",
@@ -13,6 +14,8 @@ const theme = {
 		large: "3em"
 	}
 };
+
+
 
 const Theme = ({ children }) => (
 	<ThemeProvider theme={theme}>{children}</ThemeProvider>

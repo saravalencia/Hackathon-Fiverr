@@ -9,6 +9,14 @@ import Question4 from "./components/questions/Question4";
 
 
 function App()  {
+    
+    const onSwipe = (direction) => {
+        console.log('You swiped: ' + direction)
+      }
+      
+      const onCardLeftScreen = (myIdentifier) => {
+        console.log(myIdentifier + ' left the screen')
+      }
 
     
     return (
