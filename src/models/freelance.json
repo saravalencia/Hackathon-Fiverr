@@ -1,0 +1,127 @@
+[ {
+    "name": "Carlos",
+    "surname": "Pérez",
+    "email":"carlospere@gmail.com",
+    "hourlyRate":40,
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVUWox4i-JBpFMbGRRFQA0KOUlNQ38-A_vbwhEIzl105Tnu3HZT9q0e-CO_v1MwdIlSE8&usqp=CAU", 
+    "skills":[
+    "PHP","Javascript", "Mysql", "Angular", "Sass", "Bootstrap", "Node.js","Responsive"],
+    "specialty": "Full-stack",
+    "about": "An experienced full stack developer with deeply knowledge in PHP",
+    "languages": ["English", "Spanish"],
+    "yearsOfExperience": 6,
+    "rating": 4.7
+},
+{
+    "name": "Lucia",
+    "surname": "Expósito",
+    "email":"lucia@gmail.com",
+    "hourlyRate":50,
+    "profilePic": "https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png", 
+    "skills":[
+    "MongoDB","Javascript", "React", "Vue.js", "Styled-components", "Firebase", "Node.js", "UX-UI", "e-commerce"],
+    "specialty": "Full-stack",
+    "about": "Full stack developer with extensive experience in the creation and design of web pages and e-commerces",
+    "languages": ["Spanish"],
+    "yearsOfExperience": 7,
+    "rating": 4.9
+},
+{
+    "name": "Laura",
+    "surname": "Castillo",
+    "email":"lcastillo@gmail.com",
+    "hourlyRate":35,
+    "profilePic": "https://static.vecteezy.com/system/resources/previews/001/993/889/non_2x/beautiful-latin-woman-avatar-character-icon-free-vector.jpg", 
+    "skills":[
+    "React","Javascript", "Sass", "Angular", "Styled-components", "Bootstrap", "Django", "Python", "UX-UI", "Animations", "Responsive"],
+    "specialty": "Frontend",
+    "about": "Frontend developer with deeply knowledge in UX/UI design and animations",
+    "languages": ["Spanish"],
+    "yearsOfExperience": 5,
+    "rating": 4.8
+},
+{
+    "name": "Roberto",
+    "surname": "Arrabal",
+    "email":"arrabalR@gmail.com",
+    "hourlyRate":60,
+    "profilePic": "https://w7.pngwing.com/pngs/312/283/png-transparent-man-s-face-avatar-computer-icons-user-profile-business-user-avatar-blue-face-heroes.png", 
+    "skills":[
+    "Node.js","Javascript", "Mysql", "Postgres", "PHP"],
+    "specialty": "Backend",
+    "about": "An appasionate backend developer",
+    "languages": [ "Spanish"],
+    "yearsOfExperience": 6,
+    "rating": 4.7
+},
+{
+    "name": "George",
+    "surname": "Washinton",
+    "email":"gwash@gmail.com",
+    "hourlyRate":100,
+    "profilePic": "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png", 
+    "skills":[
+    "Vue","Javascript", "Sass", "Angular", "React-native" , "React", "MongoDB", "Mysql","Bootstrap", "Django", "Python"],
+    "specialty": "Full-stack",
+    "about": "Former google developer with larger experience developing frontend projects",
+    "languages": ["English"],
+    "yearsOfExperience":15,
+    "rating": 5
+},
+{
+    "name": "Fred",
+    "surname": "Mercurie",
+    "email":"freddymer@gmail.com",
+    "hourlyRate":80,
+    "profilePic": "https://image.emojipng.com/249/10341249.jpg", 
+    "skills":[
+    "Swift","Objective-C"],
+    "specialty": "Mobile",
+    "about": "Mobile developer OS developer",
+    "languages": ["French", "English"],
+    "yearsOfExperience": 11,
+    "rating": 4.8
+},
+{
+    "name": "Rocio",
+    "surname": "Pelayo",
+    "email":"ropelayo@gmail.com",
+    "hourlyRate":50,
+    "profilePic": "https://w7.pngwing.com/pngs/193/660/png-transparent-computer-icons-woman-avatar-avatar-girl-thumbnail.png", 
+    "skills":[
+    "Javascript","React-native", "React", "Kotlin", "Swift"],
+    "specialty": "Mobile",
+    "about": "Mobile deveoper with some web experience",
+    "languages": ["English"],
+    "yearsOfExperience": 8,
+    "rating": 5
+},
+{
+    "name": "Lorena",
+    "surname": "Mansilla",
+    "email":"loreman@gmail.com",
+    "hourlyRate":30,
+    "profilePic": "https://image.pngaaa.com/982/2938982-middle.png", 
+    "skills":[
+    "Javascript","Node.js", "PHP", "Postgres", "e-commerce"],
+    "specialty": "Backend",
+    "about": "Mobile deveoper with some web experience",
+    "languages": ["Spanish, English"],
+    "yearsOfExperience": 2,
+    "rating": 4.5
+},
+{
+    "name": "Pedro",
+    "surname": "Simeone",
+    "email":"cholo@gmail.com",
+    "hourlyRate":40,
+    "profilePic": "https://www.johnmeyerwebdev.com/images/Me-Avatar-Maker.svg", 
+    "skills":[
+    "Javascript", "React", "Styled-componentys", "Sass", "UX-UI", "Animations", "Responsive"],
+    "specialty": "Frontend",
+    "about": " A web developer. +5 years developing in React",
+    "languages": ["Spanish"],
+    "yearsOfExperience": 8,
+    "rating": 5
+}
+]
