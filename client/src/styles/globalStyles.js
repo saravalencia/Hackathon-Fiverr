@@ -4,9 +4,7 @@ const GlobalStyle = createGlobalStyle`
   
 	body {
 		font-family: "Domine";
-
 	}
-
 `;
 
 export default GlobalStyle;
