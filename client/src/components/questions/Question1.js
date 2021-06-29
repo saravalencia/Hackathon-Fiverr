@@ -46,7 +46,6 @@ const Button = styled.button`
   box-shadow: 0 5px 15px #193047;
   border-radius: 4px;
   margin-top: 50px;
-}
 
 &:hover {
   background: #fff;
@@ -79,13 +78,10 @@ const Button = styled.button`
 @media screen and (max-width: 700px){
 left: 20vh;
 
-}
+}`;
 
-
-    `;
-
-    const Div = styled.div`
-    position:relative;
+  const Div = styled.div`
+  position:relative;
 	margin:auto;
 	width:100%;
 	height:100%;

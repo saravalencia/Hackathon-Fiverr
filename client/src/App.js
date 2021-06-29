@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Question1 from "./components/questions/Question1";
 import Question2 from "./components/questions/Question2";
 import Question3 from "./components/questions/Question3";
