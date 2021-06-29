@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components'
 import gifTransparent from '../../video/gifTransparent.gif'
 import home from '../home/background.jpg'
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+
+
 
 const DivHome = styled.div `
 background-image: url(${home});
@@ -15,7 +17,7 @@ height: 100vh;
 
  @media screen and (max-width: 700px){
         width: 100%;
-        height: 600px;
+       
         align-items: center;
     }
 
@@ -178,6 +180,13 @@ font-family: 'Josefin Sans',sans-serif;
 
 
 function Home() {
+
+  let history = useHistory();
+
+  function handleChange(value) {
+    history.push(`/${value}`);
+  }
+
     return (
       <DivHome  >
         <DivContainer>
@@ -185,6 +194,15 @@ function Home() {
          <H1>
           Find your Match!
         </H1>
+
+        <Select onClick={event => handleChange(event.target.value)}>
+          
+          <option value="questions-freelancer">Freelancer</option>
+         
+          <option value="questions" selected>Client</option>
+        </Select>
+
+
         </DivContainer>
         
         <DivContainerButtom>        
