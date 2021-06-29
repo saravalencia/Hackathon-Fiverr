@@ -14,7 +14,7 @@ height: 800px;
 
  @media screen and (max-width: 700px){
         width: 100%;
-        height: 600px;
+       
         align-items: center;
     }
 
