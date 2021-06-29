@@ -4,11 +4,14 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Footer from "./components/organisms/Footer";
+import Bar from "./components/molecules/Bar"; 
+import { conditionalExpression } from "../node_modules/@babel/types";
 
 const App = () => {
 
     return (
         <>
+        {/*
             <header>
                 <h1>Starter template</h1>
             </header>
@@ -18,6 +21,7 @@ const App = () => {
                     exact path="/"
                     render={props =>
                       <Home {...props} />
+                      
                     }
                 />
                 <Route
@@ -30,10 +34,17 @@ const App = () => {
                     path="/contact"
                     render={props =>
                       <Contact {...props} />
+                     
                     }
+                  
                 />
+                 <div>
+                
+                     </div>
             </Switch>
             <Footer />
+                */}
+                 <Bar  question="hello" />
         </>
     )
 };
