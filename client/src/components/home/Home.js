@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components'
 import gifTransparent from '../../video/gifTransparent.gif'
 import home from '../home/background.jpg'
 import { useHistory, Link } from 'react-router-dom';
+import { ApiContext } from '../../context/ApiContext';
 
 
 
@@ -181,6 +182,8 @@ font-family: 'Josefin Sans',sans-serif;
 
 
 function Home() {
+  const context = useContext(ApiContext);
+  console.log(context.freelancer)
 
   let history = useHistory();
 
@@ -197,7 +200,7 @@ function Home() {
           Find your Match!
         </H1>
 
-    
+
         </DivContainer>
         
         <DivContainerButtom>      
