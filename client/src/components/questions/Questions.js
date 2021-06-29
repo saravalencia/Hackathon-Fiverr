@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import gifnoloop from '../../video/gifnoloop.gif'
 import styled from 'styled-components'
 
@@ -23,7 +23,7 @@ const Button = styled.button`
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 1.2rem;
   letter-spacing: 4px;
   position: relative;
   background-color: #16a085;
@@ -31,7 +31,7 @@ const Button = styled.button`
   color: #fff;
   padding: 20px;
   width: 70%;
-  height: 5rem;
+  height: 4rem;
   text-align: center;
   transition-duration: 0.4s;
   overflow: hidden;
@@ -106,7 +106,59 @@ max-width:1000px;
 `;
 
 
-function Question1() {
+function Questions() {
+
+  const questions = [
+		{
+			questionText: 'What kind of project are you looking for',
+			answerOptions: [
+				{ answerText: 'Web Dev' },
+				{ answerText: 'Graphic Design' },
+				{ answerText: 'Software Dev' },
+				{ answerText: 'E-commerce' },
+			],
+		},
+		{
+			questionText: 'Select the languge of your preference',
+			answerOptions: [
+				{ answerText: 'English' },
+				{ answerText: 'Spanish' },
+				{ answerText: 'French' },
+				{ answerText: 'German' },
+			],
+		},
+		{
+			questionText: 'Select your price range',
+			answerOptions: [
+				{ answerText: '€ 100 - 200' },
+				{ answerText: '€ 300 - 400' },
+				{ answerText: '€ 500 - 700' },
+				{ answerText: '€ 1000 +' },
+			],
+		},
+		{
+			questionText: 'Time expectation for the project',
+			answerOptions: [
+				{ answerText: '1 week' },
+				{ answerText: '2 weeks' },
+				{ answerText: '3 weeks' },
+				{ answerText: '1 month +' },
+			],
+		},
+	];
+
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+
+  const handleQuestion = () => {
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+			setCurrentQuestion(nextQuestion)
+    
+    }
+  }
+
     return (
       <Div>
         <ImageWrapper>
@@ -114,19 +166,16 @@ function Question1() {
         </ImageWrapper>
          
          
-         <H2>What kind of project are you looking for</H2>
+         <H2>{questions[currentQuestion].questionText}</H2>
         
-        
-          <Button>Web Dev</Button>
-          <Button>Graphic Design</Button>
-          <Button>Softaware Dev</Button>
-          <Button>E-commerce</Button>
-         
-         
+         {questions[currentQuestion].answerOptions.map((answerOption) => (
+							<Button onClick={handleQuestion}>{answerOption.answerText}</Button>
+						))}
+          
        
       </Div>
     );
   }
   
-  export default Question1;
+  export default Questions;
   
