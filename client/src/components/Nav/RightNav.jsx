@@ -15,7 +15,7 @@ const Ul = styled.ul`
     &:hover {
      color: #29b34c;
     }
-  }
+  
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: #108b44;
@@ -43,8 +43,8 @@ const RightNav = ({ open }) => {
       <li>Home</li>
       <li>Clients</li>
       <li>Freelancers</li>
-      <li>Sign In</li>
       <li>About us</li>
+      <li>Sign In</li>
     </Ul>
   )
 }
