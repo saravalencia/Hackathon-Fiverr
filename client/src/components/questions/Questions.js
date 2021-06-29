@@ -45,6 +45,9 @@ const Button = styled.button`
   border-radius: 4px;
   margin-top: 80px;
   max-width:800px;
+
+
+
   &:hover {
   background: #fff;
   box-shadow: 0px 2px 10px 5px #1abc9c;
