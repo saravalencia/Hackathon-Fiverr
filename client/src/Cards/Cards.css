@@ -3,11 +3,22 @@
     text-align: center;
   }
   
-  h4 {
+  h3 {
     display: block;
     margin-block-start: 1.33em;
     margin-block-end: 1.33em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+.wrapper{
+  margin:10%;
+}
+
+.Cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
 }
