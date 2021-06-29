@@ -177,6 +177,7 @@ font-family: 'Josefin Sans',sans-serif;
 }  
     }
 `
+
  
 
 
@@ -190,6 +191,7 @@ function Home() {
     history.push(`/${value}`);
   }
 
+
     return (
       <DivHome  >
         <DivContainer>
@@ -198,11 +200,13 @@ function Home() {
           Find your Match!
         </H1>
 
+
         </DivContainer>
         
-        <DivContainerButtom>        
-        <Button> Freelancer</Button>
-        <Button> Client </Button>
+        <DivContainerButtom>      
+          
+        <Button ><Link style={{textDecoration:'none'}} to="/questions-freelancer">Freelancer</Link> </Button>
+        <Button><Link  style={{textDecoration:'none'}} to="/questions"> Client </Link>  </Button>
         </DivContainerButtom>
       
 
