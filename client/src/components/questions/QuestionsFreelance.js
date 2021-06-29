@@ -105,20 +105,20 @@ max-width:1000px;
 `;
 
 
-function Questions() {
+function QuestionsFreelance() {
 
   const questions = [
 		{
-			questionText: 'What kind of project are you looking for',
+			questionText: 'What kind freelancer you wanto to team with',
 			answerOptions: [
 				{ answerText: 'Web Dev' },
-				{ answerText: 'Graphic Design' },
+				{ answerText: 'Graphic Designer' },
 				{ answerText: 'Software Dev' },
-				{ answerText: 'E-commerce' },
+				{ answerText: 'Data Analyst' },
 			],
 		},
 		{
-			questionText: 'Select the languge of your preference',
+			questionText: 'Select the languge for your team',
 			answerOptions: [
 				{ answerText: 'English' },
 				{ answerText: 'Spanish' },
@@ -127,7 +127,7 @@ function Questions() {
 			],
 		},
 		{
-			questionText: 'Select your price range',
+			questionText: 'Select price range of the project',
 			answerOptions: [
 				{ answerText: '€ 100 - 200' },
 				{ answerText: '€ 300 - 400' },
@@ -154,21 +154,34 @@ function Questions() {
 			],
 		},
     {
-			questionText: 'Experince required for the job',
+			questionText: 'Web app or mobile only ?',
 			answerOptions: [
-				{ answerText: '1 year' },
-				{ answerText: '2 years' },
-				{ answerText: '3 years' },
-				{ answerText: '5 +' },
+				{ answerText: 'Web' },
+				{ answerText: 'Mobile' },
+			
 			],
 		},
     {
-			questionText: 'Select rating on Fiverr, this just means a variation on prices',
+			questionText: 'Select a speciality for the job',
 			answerOptions: [
-				{ answerText: '2' },
-				{ answerText: '3' },
-				{ answerText: '4' },
-				{ answerText: '5' },
+				{ answerText: 'Front' },
+				{ answerText: 'Back' },
+				{ answerText: 'Both' },
+				
+			],
+		},
+    {
+			questionText: 'Select skills for the project',
+			answerOptions: [
+				{ answerText: 'Javascript' },
+				{ answerText: 'MySQL' },
+				{ answerText: 'PHP' },
+				{ answerText: 'React' },
+        { answerText: 'React Native' },
+        { answerText: 'Vue' },
+        { answerText: 'Angular' },
+        { answerText: 'Swift' },
+        { answerText: 'MongoDb' },
 			],
 		},
 	];
@@ -203,5 +216,5 @@ function Questions() {
     );
   }
   
-  export default Questions;
+  export default QuestionsFreelance;
   

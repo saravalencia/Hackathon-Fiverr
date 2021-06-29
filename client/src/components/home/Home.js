@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import gifTransparent from '../../video/gifTransparent.gif'
 import home from '../home/background.jpg'
+import { useHistory } from 'react-router-dom';
 
 const DivHome = styled.div `
 background-image: url(${home});
@@ -70,6 +71,13 @@ padding-left: 66px;
 `
 
 function Home() {
+
+  let history = useHistory();
+
+  function handleChange(value) {
+    history.push(`/${value}`);
+  }
+
     return (
       <DivHome  >
         <DivContainer>
@@ -80,9 +88,10 @@ function Home() {
         <H1>
           Find your Match!
         </H1>
-        <Select>
-          <option value="frelance">Freelancer</option>
-          <option value="Client" selected>Client</option>
+        <Select onChange={event => handleChange(event.target.value)}>
+          <option value="questions-freelancer">Freelancer</option>
+         
+          <option value="questions" selected>Client</option>
         </Select>
         </DivContainer>
       
