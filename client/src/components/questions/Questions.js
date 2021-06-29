@@ -127,12 +127,12 @@ function Questions() {
 			],
 		},
 		{
-			questionText: 'Select your price range',
+			questionText: 'Select your hourly price range',
 			answerOptions: [
-				{ answerText: '€ 100 - 200' },
-				{ answerText: '€ 300 - 400' },
-				{ answerText: '€ 500 - 700' },
-				{ answerText: '€ 1000 +' },
+				{ answerText: '€ 10' },
+				{ answerText: '€ 30' },
+				{ answerText: '€ 50' },
+				{ answerText: '€ 100' },
 			],
 		},
 		{
