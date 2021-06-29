@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components'
 import gifTransparent from '../../video/gifTransparent.gif'
 import home from '../home/background.jpg'
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+import { ApiContext } from '../../context/ApiContext';
+
+
 
 const DivHome = styled.div `
 background-image: url(${home});
@@ -15,7 +18,7 @@ height: 100vh;
 
  @media screen and (max-width: 700px){
         width: 100%;
-        height: 600px;
+       
         align-items: center;
     }
 
@@ -174,10 +177,21 @@ font-family: 'Josefin Sans',sans-serif;
 }  
     }
 `
+
  
 
 
 function Home() {
+  const context = useContext(ApiContext);
+  console.log(context.freelancer)
+
+  let history = useHistory();
+
+  function handleChange(value) {
+    history.push(`/${value}`);
+  }
+
+
     return (
       <DivHome  >
         <DivContainer>
@@ -185,11 +199,20 @@ function Home() {
          <H1>
           Find your Match!
         </H1>
+
+
         </DivContainer>
         
+<<<<<<< HEAD
         <DivContainerButtom>        
         <Button> <Link to="/question">Freelancer</Link></Button>
         <Button> Client </Button>
+=======
+        <DivContainerButtom>      
+          
+        <Button ><Link style={{textDecoration:'none'}} to="/questions-freelancer">Freelancer</Link> </Button>
+        <Button><Link  style={{textDecoration:'none'}} to="/questions"> Client </Link>  </Button>
+>>>>>>> 2e564575c1640650545986141c07a45367bc5729
         </DivContainerButtom>
       
 

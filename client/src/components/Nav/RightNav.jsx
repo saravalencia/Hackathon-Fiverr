@@ -10,14 +10,6 @@ const Ul = styled.ul`
   font-family: Domine;
   font-weight: bold;
 
-  
-
-  li {
-    padding: 18px 10px;
-    &:hover {
-     color: #29b34c;
-    }
-  
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: #108b44;
@@ -29,13 +21,13 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-    li {
-      color: #fff;
     }
 
-  
+  li {
+    padding: 18px 10px;
+    &:hover {
+     color: #29b34c;
     }
-
   }
 `;
 
@@ -43,8 +35,8 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
       <li>Home</li>
-      <li>Clients</li>
-      <li>Freelancers</li>
+      <li>Favorites</li>
+      <li>Messages</li>
       <li>About us</li>
       <li>Sign In</li>
     </Ul>

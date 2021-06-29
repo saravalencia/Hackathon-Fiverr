@@ -1,12 +1,6 @@
-import React, {useState, useContext} from 'react';
+import React, {useState} from 'react';
 import gifnoloop from '../../video/gifnoloop.gif'
 import styled from 'styled-components'
-import { ApiContext } from '../../context/ApiContext';
-
-
-
-
-   
 
 const H2 = styled.h1`
 border: none;
@@ -45,10 +39,9 @@ const Button = styled.button`
   border-radius: 4px;
   margin-top: 2rem;
   max-width:800px;
+}
 
-
-
-  &:hover {
+&:hover {
   background: #fff;
   box-shadow: 0px 2px 10px 5px #1abc9c;
   color: #000;
@@ -75,16 +68,17 @@ const Button = styled.button`
 }
 
 &:focus { outline:0; }
+
 @media screen and (max-width: 700px){
 
 
 }
-`;
 
 
+    `;
 
-const Div = styled.div`
-position:relative;
+    const Div = styled.div`
+    position:relative;
 	margin:auto;
 	width:100%;
 	height:100%;
@@ -111,37 +105,25 @@ max-width:1000px;
 `;
 
 
-function Questions() {
-
-  const context = useContext(ApiContext);
-  console.log(context.freelancer)
+function QuestionsFreelance() {
 
   const questions = [
 		{
-			questionText: 'What kind of project are you looking for',
+			questionText: 'What kind freelancer you wanto to team with',
 			answerOptions: [
 				{ answerText: 'Web Dev' },
-				{ answerText: 'Graphic Design' },
+				{ answerText: 'Graphic Designer' },
 				{ answerText: 'Software Dev' },
-				{ answerText: 'Digital Marketing' },
+				{ answerText: 'Data Analyst' },
 			],
 		},
 		{
-			questionText: 'Select the languge of your preference',
+			questionText: 'Select the languge for your team',
 			answerOptions: [
 				{ answerText: 'English' },
 				{ answerText: 'Spanish' },
 				{ answerText: 'French' },
 				{ answerText: 'German' },
-			],
-		},
-		{
-			questionText: 'Select your hourly price range',
-			answerOptions: [
-				{ answerText: '€ 10' },
-				{ answerText: '€ 30' },
-				{ answerText: '€ 50' },
-				{ answerText: '€ 100' },
 			],
 		},
 		{
@@ -151,21 +133,81 @@ function Questions() {
 				{ answerText: '2 weeks' },
 				{ answerText: '3 weeks' },
 				{ answerText: '1 month +' },
+        { answerText: 'To Discuss' },
 			],
 		},
     {
-			questionText: 'What kind of specialitys you need for the project',
+			questionText: 'Experince required for the job',
 			answerOptions: [
-				{ answerText: 'UX UI' },
-				{ answerText: 'Animation' },
-				{ answerText: 'E-commerce' },
-				{ answerText: 'CMS systems' },
-        { answerText: 'Chat managment' },
-        { answerText: 'FinTech' },
-        { answerText: 'Websites' },
+				{ answerText: '1 year' },
+				{ answerText: '2 years' },
+				{ answerText: '3 years' },
+				{ answerText: '5 +' },
 			],
 		},
-   
+    {
+			questionText: 'Web app or mobile only ?',
+			answerOptions: [
+				{ answerText: 'Web' },
+				{ answerText: 'Mobile' },
+        { answerText: 'Both' },
+			],
+		},
+    {
+			questionText: 'Select a speciality for the job',
+			answerOptions: [
+				{ answerText: 'Front' },
+				{ answerText: 'Back' },
+				{ answerText: 'Both' },
+				
+			],
+		},
+    {
+			questionText: 'Select skills for the front end project',
+			answerOptions: [
+				{ answerText: 'Javascript' },
+				{ answerText: 'MySQL' },
+				{ answerText: 'PHP' },
+				{ answerText: 'React' },
+        { answerText: 'React Native' },
+        { answerText: 'Vue' },
+        { answerText: 'Angular' },
+        { answerText: 'Swift' },
+        { answerText: 'MongoDb' },
+        { answerText: 'Sass' },
+        { answerText: 'Styled components' },
+			],
+		},
+    {
+			questionText: 'Select skills for the back end project',
+			answerOptions: [
+				{ answerText: 'Javascript' },
+				{ answerText: 'PHP' },
+				{ answerText: 'Python' },
+        { answerText: 'Node JS' },
+        { answerText: 'C' },
+        { answerText: 'Ruby' },
+        { answerText: 'Java' },
+        { answerText: 'C#' },
+			],
+		},
+    {
+			questionText: 'Do you need a relational or not relational Database',
+			answerOptions: [
+				{ answerText: 'Relational' },
+				{ answerText: 'Not relational' },
+				
+			],
+		},
+    {
+			questionText: 'What kind of Relational Db do you need ?',
+			answerOptions: [
+				{ answerText: 'MySQL' },
+				{ answerText: 'Postgres' },
+        { answerText: 'MariaDB' },
+        { answerText: 'Oracle Sql' },
+			],
+		},
 	];
 
 
@@ -198,5 +240,5 @@ function Questions() {
     );
   }
   
-  export default Questions;
+  export default QuestionsFreelance;
   
