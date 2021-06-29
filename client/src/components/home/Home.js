@@ -204,14 +204,20 @@ function Home() {
         </DivContainer>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         <DivContainerButtom>        
         <Button> <Link to="/question">Freelancer</Link></Button>
         <Button> Client </Button>
 =======
+=======
+>>>>>>> 2e564575c1640650545986141c07a45367bc5729
         <DivContainerButtom>      
           
         <Button ><Link style={{textDecoration:'none'}} to="/questions-freelancer">Freelancer</Link> </Button>
         <Button><Link  style={{textDecoration:'none'}} to="/questions"> Client </Link>  </Button>
+<<<<<<< HEAD
+>>>>>>> 2e564575c1640650545986141c07a45367bc5729
+=======
 >>>>>>> 2e564575c1640650545986141c07a45367bc5729
         </DivContainerButtom>
       
