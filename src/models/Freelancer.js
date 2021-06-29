@@ -12,6 +12,15 @@ const FreelancerSchema = mongoose.Schema({
         required: true,
         trim: true
     },
+    email:{
+        type: String,
+        trim: true,
+        required:true,
+        unique:true
+    },
+    hourlyRate:{
+        type: Number,
+    },
     profilePic: {
         type: String,
     }, 
