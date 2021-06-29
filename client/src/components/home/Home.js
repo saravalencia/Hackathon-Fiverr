@@ -185,11 +185,6 @@ function Home() {
   const context = useContext(ApiContext);
   console.log(context.freelancer)
 
-  let history = useHistory();
-
-  function handleChange(value) {
-    history.push(`/${value}`);
-  }
 
 
     return (
@@ -205,8 +200,8 @@ function Home() {
         
         <DivContainerButtom>      
           
-        <Button ><Link style={{textDecoration:'none'}} to="/questions-freelancer">Freelancer</Link> </Button>
-        <Button><Link  style={{textDecoration:'none'}} to="/questions"> Client </Link>  </Button>
+        <Button ><Link style={{textDecoration:'none', color:'black'}} to="/questions-freelancer">Freelancer</Link> </Button>
+        <Button><Link  style={{textDecoration:'none', color:'black'}} to="/questions"> Client </Link>  </Button>
         </DivContainerButtom>
       
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import gifnoloop from '../../video/gifnoloop.gif'
 import styled from 'styled-components'
 
@@ -202,7 +202,7 @@ function QuestionsFreelance() {
     {
 			questionText: 'What kind of Relational Db do you need ?',
 			answerOptions: [
-				{ answerText: 'MySQL' },
+				{ answerText: 'MySQL', id:'Mysql'},
 				{ answerText: 'Postgres' },
         { answerText: 'MariaDB' },
         { answerText: 'Oracle Sql' },
@@ -213,14 +213,23 @@ function QuestionsFreelance() {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
+  const [selectedAnswer, setSelectedAnswer] = useState([])
 
-  const handleQuestion = () => {
+ 
+
+  const handleQuestion =  (info) => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion)
-    
+      setSelectedAnswer({...selectedAnswer, info.target.innerHTML})
+     
     }
+    
   }
+  useEffect(() => {
+    console.log(selectedAnswer)
+   });
+
 
     return (
       <Div>

@@ -158,7 +158,7 @@ function Questions() {
 			answerOptions: [
 				{ answerText: 'UX UI' },
 				{ answerText: 'Animation' },
-				{ answerText: 'E-commerce' },
+				{ answerText: 'e-commerce' },
 				{ answerText: 'CMS systems' },
         { answerText: 'Chat managment' },
         { answerText: 'FinTech' },
