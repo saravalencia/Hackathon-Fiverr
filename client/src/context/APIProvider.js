@@ -8,6 +8,7 @@ const APIProvider = (props) => {
 	//states to store data coming from various APIs
 	const [freelancers, setFreelancers] = useState({});
 	const [freelacersLoaded, setFreelancersLoaded] = useState(false);
+	const {freelancer} = freelancers
 	
 
 	useEffect(() => {
@@ -18,7 +19,7 @@ const APIProvider = (props) => {
 	}, [])
 
 	return (
-		<context.Provider value={{ freelancers, freelacersLoaded}} >
+		<context.Provider value={{ freelancer: freelancer, freelacersLoaded: freelacersLoaded}} >
 			{ props.children }
 		</context.Provider>
 	)
