@@ -6,20 +6,19 @@ export const context = React.createContext();
 const APIProvider = (props) => {
 
 	//states to store data coming from various APIs
-	const [users, setUsers] = useState({});
-	const [usersLoaded, setUsersLoaded] = useState(false);
-	const [movies, setMovies] = useState({});
-	const [moviesLoaded, setMoviesLoaded] = useState(false);
+	const [freelancers, setFreelancers] = useState({});
+	const [freelacersLoaded, setFreelancersLoaded] = useState(false);
+	
 
 	useEffect(() => {
 		// using the helper function to fetch from 2 APIs
 		// you can store the result in this same context or create a new one using this code as a template
-		fetchData('/api/users', setUsers, setUsersLoaded);
-		fetchData('https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/movies.json', setMovies, setMoviesLoaded)
+		fetchData('http://localhost:5000/api/freelancers', setFreelancers, setFreelancersLoaded);
+		
 	}, [])
 
 	return (
-		<context.Provider value={{ users, usersLoaded, movies, moviesLoaded }} >
+		<context.Provider value={{ freelancers, freelacersLoaded}} >
 			{ props.children }
 		</context.Provider>
 	)

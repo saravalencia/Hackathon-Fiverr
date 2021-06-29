@@ -1,0 +1,109 @@
+[ {
+    "name": "Carlos",
+    "surname": "Pérez",
+    "profilePic": "", 
+    "skills":[
+    "PHP","Javascript", "Mysql", "Angular", "Sass", "Bootstrap", "Node.js"],
+    "specialty": "Full-stack",
+    "about": "An experienced full stack developer with deeply knowledge in PHP",
+    "languages": ["English", "Spanish"],
+    "yearsOfExperience": 6,
+    "rating": 4.7
+},
+{
+    "name": "Lucia",
+    "surname": "Expósito",
+    "profilePic": "", 
+    "skills":[
+    "MongoDB","Javascript", "React", "Vue.js", "Styled-components", "Firebase", "Node.js", "Design"],
+    "specialty": "Full-stack",
+    "about": "with extensive experience in the creation and design of web pages",
+    "languages": ["Spanish"],
+    "yearsOfExperience": 7,
+    "rating": 4.9
+},
+{
+    "name": "Laura",
+    "surname": "Castillo",
+    "profilePic": "", 
+    "skills":[
+    "React","Javascript", "Sass", "Angular", "Styled-components", "Bootstrap", "Django", "Python"],
+    "specialty": "Frontend",
+    "about": "Frontend developer with deeply knowledge in UX/UI design",
+    "languages": ["Spanish"],
+    "yearsOfExperience": 5,
+    "rating": 4.8
+},
+{
+    "name": "Roberto",
+    "surname": "Arrabal",
+    "profilePic": "", 
+    "skills":[
+    "Node.js","Javascript", "Mysql", "Postgres", "PHP"],
+    "specialty": "Backend",
+    "about": "An appasionate backend developer",
+    "languages": [ "Spanish"],
+    "yearsOfExperience": 6,
+    "rating": 4.7
+},
+{
+    "name": "George",
+    "surname": "Washinton",
+    "profilePic": "", 
+    "skills":[
+    "Vue","Javascript", "Sass", "Angular", "React-native" , "React", "MongoDB", "Mysql","Bootstrap", "Django", "Python"],
+    "specialty": "Full-stack",
+    "about": "Former google developer with larger experience developing frontend projects",
+    "languages": ["English"],
+    "yearsOfExperience": 5,
+    "rating": 5
+},
+{
+    "name": "Fred",
+    "surname": "Mercurie",
+    "profilePic": "", 
+    "skills":[
+    "Swift","Objective-C"],
+    "specialty": "Mobile",
+    "about": "Mobile developer OS developer",
+    "languages": ["French", "English"],
+    "yearsOfExperience": 3,
+    "rating": 4.8
+},
+{
+    "name": "Rocio",
+    "surname": "Pleayo",
+    "profilePic": "", 
+    "skills":[
+    "Javascript","React-native", "React", "Kotlin", "Swift"],
+    "specialty": "Mobile",
+    "about": "Mobile deveoper with some web experience",
+    "languages": ["English"],
+    "yearsOfExperience": 8,
+    "rating": 5
+},
+{
+    "name": "Lorena",
+    "surname": "Mansilla",
+    "profilePic": "", 
+    "skills":[
+    "Javascript","Node.js", "PHP", "Postgres"],
+    "specialty": "Backend",
+    "about": "Mobile deveoper with some web experience",
+    "languages": ["Spanish, English"],
+    "yearsOfExperience": 2,
+    "rating": 4.5
+},
+{
+    "name": "Pedro",
+    "surname": "Simeone",
+    "profilePic": "", 
+    "skills":[
+    "Javascript", "React", "Styled-componentys", "Sass"],
+    "specialty": "Frontend",
+    "about": " A web developer. +5 years developing in React",
+    "languages": ["Spanish"],
+    "yearsOfExperience": 8,
+    "rating": 5
+}
+]
