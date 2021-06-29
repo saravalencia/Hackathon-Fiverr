@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import React, {Fragment} from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
 import Question1 from "./components/questions/Question1";
@@ -9,7 +10,7 @@ import Question4 from "./components/questions/Question4";
 
 
 function App()  {
-    
+
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction)
       }
@@ -20,7 +21,7 @@ function App()  {
 
     
     return (
-        <>
+        <Fragment>
             <Navbar />
             <Switch>
                 <Route
@@ -57,7 +58,7 @@ function App()  {
                 />
             </Switch>
             
-        </>
+        </Fragment>
     )
 };
 
