@@ -1,9 +1,12 @@
 import { Switch, Route } from "react-router-dom";
+import React, {Fragment} from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/home/Home";
+import Questions from "./components/questions/Questions";
 
 
-const App = () => {
 
-
+function App()  {
 
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction)
@@ -12,15 +15,30 @@ const App = () => {
       const onCardLeftScreen = (myIdentifier) => {
         console.log(myIdentifier + ' left the screen')
       }
-      
 
+    
     return (
-        <>
-            <header>
-                <h1>Starter template</h1>
-            </header>
+        <Fragment>
+            <Navbar />
+            <Switch>
+                <Route
+                    exact path="/"
+                    render={props =>
+                      <Home {...props} />
+                    }
+                />
+              
 
-        </>
+                <Route
+                    path="/questions"
+                    render={props =>
+                      <Questions {...props} />
+                    }
+                />
+               
+            </Switch>
+            
+        </Fragment>
     )
 };
 
