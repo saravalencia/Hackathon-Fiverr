@@ -39,7 +39,7 @@ const Button = styled.button`
   border-radius: 4px;
   margin-top: 80px;
   max-width:800px;
-}
+
 
 &:hover {
   background: #fff;
