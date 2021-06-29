@@ -1,4 +1,6 @@
 import { Switch, Route } from "react-router-dom";
+import Cards from "./components/Cards/Cards";
+
 import React, {Fragment} from "react";
 // import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
@@ -19,33 +21,44 @@ function App()  {
 
     
     return (
-        <Fragment>
-            {/* <Navbar /> */}
-            <Switch>
-                <Route
-                    exact path="/"
-                    render={props =>
-                      <Home {...props} />
-                    }
-                />
-              
+      <Fragment>
+      {/* <Navbar /> */}
+      <Switch>
+          <Route
+              exact path="/"
+              render={props =>
+                <Home {...props} />
+              }
+          />
 
-                <Route
-                    path="/questions"
-                    render={props =>
-                      <Questions {...props} />
-                    }
-                />
-                 <Route
-                    path="/questions-freelancer"
-                    render={props =>
-                      <QuestionsFreelance {...props} />
-                    }
-                />
-               
-            </Switch>
-            
-        </Fragment>
+
+          <Route
+              path="/questions"
+              render={props =>
+                <Questions {...props} />
+              }
+          />
+           <Route
+              path="/questions-freelancer"
+              render={props =>
+                <QuestionsFreelance {...props} />
+              }
+
+              
+          />
+          <Route
+              path="/matches"
+              render={props =>
+                <Cards {...props} />
+              }
+
+              
+          />
+
+      </Switch>
+
+  </Fragment>
+
     )
 };
 
