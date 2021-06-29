@@ -2,26 +2,18 @@ import React from 'react';
 import gifnoloop from '../../video/gifnoloop.gif'
 import styled from 'styled-components'
 
-const H3 = styled.button`
-font-size: 3rem;
-background-color: white;
+const H2 = styled.h1`
 border: none;
-display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  position: absolute;
   font-weight: 600;
   font-family: 'Josefin Sans', sans-serif;
-  text-align: justify;
-  
-
+  text-align: center;
+  font-size: 2.5rem;
 
   @media screen and (max-width: 700px){
-        left: 20vh;
-        font-size: 3rem;
-       padding-top: 2rem;
-       width: 500px;
-       text-align: justify;
+        
+       margin-bottom: 2rem;
+    
+       
     }
 
 `;
@@ -38,14 +30,15 @@ const Button = styled.button`
   border: none;
   color: #fff;
   padding: 20px;
-  width: 400px;
-  height: 100px;
+  width: 70%;
+  height: 5rem;
   text-align: center;
   transition-duration: 0.4s;
   overflow: hidden;
   box-shadow: 0 5px 15px #193047;
   border-radius: 4px;
-  margin-top: 50px;
+  margin-top: 80px;
+  max-width:800px;
 }
 
 &:hover {
@@ -77,7 +70,7 @@ const Button = styled.button`
 &:focus { outline:0; }
 
 @media screen and (max-width: 700px){
-left: 20vh;
+
 
 }
 
@@ -89,27 +82,49 @@ left: 20vh;
 	margin:auto;
 	width:100%;
 	height:100%;
-  text-align:center;
-  padding:30vh 0;
+  text-align:justify;
+  padding:5vh 0;
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     
     `;
 
+const Image = styled.img`
+height: auto ;
+width: 100%;
+margin: 0 auto;
+
+`;
+const ImageWrapper = styled.div`
+width: 100%;
+max-width:1000px;
+
+`;
+
+
 function Question1() {
     return (
-      <div className="Question1">
-         <img src={gifnoloop}  alt='gif'></img>
-         <div>
-         <H3>What kind of project are you looking for ?</H3>
-         </div>
-         <Div>
-          <Button>Web App</Button>
+      <Div>
+        <ImageWrapper>
+        <Image src={gifnoloop}  alt='gif'></Image>
+        </ImageWrapper>
+         
+         
+         <H2>What kind of project are you looking for</H2>
+        
+        
+          <Button>Web Dev</Button>
           <Button>Graphic Design</Button>
-          <Button>Software</Button>
+          <Button>Softaware Dev</Button>
           <Button>E-commerce</Button>
-         </Div>
+         
          
        
-      </div>
+      </Div>
     );
   }
   
