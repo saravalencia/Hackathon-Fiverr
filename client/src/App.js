@@ -3,6 +3,7 @@ import React, {Fragment} from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
 import Questions from "./components/questions/Questions";
+import QuestionTest from "./components/questions/QuestionTest";
 
 
 
@@ -33,6 +34,12 @@ function App()  {
                     path="/questions"
                     render={props =>
                       <Questions {...props} />
+                    }
+                />
+                <Route
+                    path="/questionstes"
+                    render={props =>
+                      <QuestionTest {...props} />
                     }
                 />
                

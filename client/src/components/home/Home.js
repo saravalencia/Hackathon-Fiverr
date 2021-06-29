@@ -188,7 +188,7 @@ function Home() {
         </DivContainer>
         
         <DivContainerButtom>        
-        <Button> Freelancer</Button>
+        <Button> <Link to="/question">Freelancer</Link></Button>
         <Button> Client </Button>
         </DivContainerButtom>
       
