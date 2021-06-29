@@ -1,16 +1,25 @@
 const express = require('express');
 const app = express();
-const testRouter = require('./routes/testRouter');
-const usersRouter = require('./routes/usersRouter');
+const freelancerRouter = require('./routes/freelancerRouter');
 const path = require('path')
+const {dbConnection} = require('./conf');
+const cors= require("cors");
 
 // global middleware
 app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
+app.use(cors())
 
-app.use('/api/', testRouter); // Handles GET requests to /api, sends back "API is running"
 
-app.use('/api/users', usersRouter); // Handles GET request to /api/users, sends back everything in the DB users table
+
+
+//connection to DB
+dbConnection();
+
+//routes
+app.use('/api/freelancers', freelancerRouter); // Handles GET requests to /api, sends back "API is running"
+
+
 
 //Serve static assets if in production.
 if (process.env.NODE_ENV === 'production') {
