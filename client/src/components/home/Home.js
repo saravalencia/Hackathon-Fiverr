@@ -9,7 +9,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 width: 100%;
-height: 800px;
+height: 100vh;
 
 
  @media screen and (max-width: 700px){
