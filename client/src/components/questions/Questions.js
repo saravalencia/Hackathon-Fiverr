@@ -1,6 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import gifnoloop from '../../video/gifnoloop.gif'
 import styled from 'styled-components'
+import { ApiContext } from '../../context/ApiContext';
+
+
+
+
+   
 
 const H2 = styled.h1`
 border: none;
@@ -39,9 +45,7 @@ const Button = styled.button`
   border-radius: 4px;
   margin-top: 80px;
   max-width:800px;
-}
-
-&:hover {
+  &:hover {
   background: #fff;
   box-shadow: 0px 2px 10px 5px #1abc9c;
   color: #000;
@@ -68,17 +72,16 @@ const Button = styled.button`
 }
 
 &:focus { outline:0; }
-
 @media screen and (max-width: 700px){
 
 
 }
+`;
 
 
-    `;
 
-    const Div = styled.div`
-    position:relative;
+const Div = styled.div`
+position:relative;
 	margin:auto;
 	width:100%;
 	height:100%;
@@ -107,6 +110,9 @@ max-width:1000px;
 
 
 function Questions() {
+
+  const context = useContext(ApiContext);
+  console.log(context.freelancer)
 
   const questions = [
 		{

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fetchData from "../utils/fetchData";
 
-export const context = React.createContext();
+export const ApiContext = React.createContext();
 
 const APIProvider = (props) => {
 
@@ -19,9 +19,9 @@ const APIProvider = (props) => {
 	}, [])
 
 	return (
-		<context.Provider value={{ freelancer: freelancer, freelacersLoaded: freelacersLoaded}} >
+		<ApiContext.Provider value={{ freelancer: freelancer, freelacersLoaded: freelacersLoaded}} >
 			{ props.children }
-		</context.Provider>
+		</ApiContext.Provider>
 	)
 };
 

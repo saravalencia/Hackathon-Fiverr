@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import APIProvider from "./context/APIProvider";
+import APIProvider from "./context/ApiContext";
 import MyProvider from "./context/MyProvider";
 import { BrowserRouter } from "react-router-dom";
 import Theme from "./styles/Theme";
