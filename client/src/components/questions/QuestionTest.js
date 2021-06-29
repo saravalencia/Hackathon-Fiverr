@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import gifTransparent from '../../video/gifTransparent.gif'
 import styled from 'styled-components'
 import questions from '../questions/questions.jpg'
-import SaveQuestion from './SaveQuestion';
+
 const DivHome = styled.div `
 background-image: url(${questions});
 background-size: cover;
@@ -44,6 +44,13 @@ background-color: rgb(220 219 219 / 50%);
 
 `
 
+const DivContainerButtom = styled.div `
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+`
+
 const ImgLogo = styled.img `
     width: 501px;
     height: 274px;
@@ -58,6 +65,113 @@ const DivQuestion = styled.div `
 font-family: 'Josefin Sans',sans-serif;
 
 `
+
+const Button = styled.button`
+margin: 37px;
+width: 325px;
+height: 80px;
+font-size: 2rem;
+border: 0px solid transparent;
+background-color: rgb(220 219 219 / 50%);;
+border-radius: 4 px;
+text-transform: uppercase;
+transition: all 0.3s;
+position: relative;
+cursor: pointer;
+font-family: 'Josefin Sans',sans-serif;
+&:after{
+  content: "";
+  width: 50px;
+  height: 20px;
+  border-top: 8px solid #1DBF73;
+  border-left: 8px solid #1DBF73;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  transition: all 0.2s;
+}
+
+&:before{
+  content: "";
+  width: 50px;
+  height: 20px;
+  border-bottom: 8px solid #1DBF73;
+  border-right: 8px solid #1DBF73;
+  position: absolute;
+  left: -1;
+  right: 0;
+  bottom: 0;
+  top: -1;
+  transition: all 0.2s;
+}
+
+&:hover:after{
+  width: 340px;
+  height: 90px;
+}
+
+&:hover:before{
+  width: 340px;
+  height: 90px;
+}
+
+@media screen and (max-width: 700px){
+margin: 8px;
+width: 205px;
+height: 50px;
+font-size: 1.5rem;
+border: 0px solid transparent;
+background-color: rgb(220 219 219 / 50%);;
+border-radius: 4 px;
+text-transform: uppercase;
+transition: all 0.3s;
+position: relative;
+cursor: pointer;
+font-family: 'Josefin Sans',sans-serif;
+
+&:after{
+  content: "";
+  width: 50px;
+  height: 20px;
+  border-top: 4px solid #1DBF73;
+  border-left: 4px solid #1DBF73;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  transition: all 0.2s;
+}
+
+&:before{
+  content: "";
+  width: 50px;
+  height: 20px;
+  border-bottom: 4px solid #1DBF73;
+  border-right: 4px solid #1DBF73;
+  position: absolute;
+  left: -1;
+  right: 0;
+  bottom: 0;
+  top: -1;
+  transition: all 0.2s;
+}
+
+&:hover:after{
+  width: 220px;
+  height: 55px;
+}
+
+&:hover:before{
+  width: 220px;
+  height: 55px;
+}  
+    }
+`
+ 
+
 
 function QuestionTest() {
 
@@ -101,15 +215,18 @@ function QuestionTest() {
       ];
   
       const [currentQuestion, setCurrentQuestion] = useState(0);
-      let [selectedAnswer, setSelectedAnswer] = useState([]);
+      let [selectedAnswer, setSelectedAnswer] = useState([questions.answerOptions]);
+console.log(selectedAnswer)
 
-
-      const handleAnswer = (answers) => {
-
-        setSelectedAnswer([...currentQuestion, answers])
-      console.log(setSelectedAnswer)
+ 
      
-     };
+  const handleQuestion =  () => {
+    
+    console.log('click')
+    
+  }
+  
+ 
       return (
         
           <DivHome> 
@@ -120,15 +237,16 @@ function QuestionTest() {
             <DivShadow>
                 
                 <H2>Question Title</H2>
-               <DivQuestion>
-                {questions[currentQuestion].answerOptions.map((answerOption) => (
-							<p ><SaveQuestion handleAnswer={handleAnswer}
-                            info={questions[currentQuestion].answerOptions}/>{answerOption.answerText}</p>
-                            
+             
+               <DivContainerButtom >
+               {questions[currentQuestion].answerOptions.map((answerOption) => (
+							<Button onClick={handleQuestion}>{answerOption.answerText}</Button>
 						))}
                 
-               </DivQuestion>
+               </DivContainerButtom >
+             
             </DivShadow>
+            
          </DivHome>  
         
       );
