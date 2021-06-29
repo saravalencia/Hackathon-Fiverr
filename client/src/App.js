@@ -2,10 +2,7 @@ import { Switch, Route } from "react-router-dom";
 import React, {Fragment} from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
-import Question1 from "./components/questions/Question1";
-import Question2 from "./components/questions/Question2";
-import Question3 from "./components/questions/Question3";
-import Question4 from "./components/questions/Question4";
+import Questions from "./components/questions/Questions";
 
 
 
@@ -33,29 +30,12 @@ function App()  {
               
 
                 <Route
-                    path="/question1"
+                    path="/questions"
                     render={props =>
-                      <Question1 {...props} />
+                      <Questions {...props} />
                     }
                 />
-                <Route
-                    path="/question2"
-                    render={props =>
-                      <Question2 {...props} />
-                    }
-                />
-                 <Route
-                    path="/question3"
-                    render={props =>
-                      <Question3 {...props} />
-                    }
-                />
-                 <Route
-                    path="/question4"
-                    render={props =>
-                      <Question4 {...props} />
-                    }
-                />
+               
             </Switch>
             
         </Fragment>
