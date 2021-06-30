@@ -1,4 +1,5 @@
 import React from "react";
+import TinderCard from 'react-tinder-card'; 
 
 const styleCard = {
   margin: "10px 0px",
@@ -38,7 +39,17 @@ const iconStyle = {height: "16px", width: "16px"};
 
 const prizeStyle = {float: "right"};
 
+const onSwipe = (direction) => {
+  console.log('You swiped: ' + direction)
+}
+
+const onCardLeftScreen = (myIdentifier) => {
+  console.log(myIdentifier + ' left the screen')
+}
+
 export default class Card extends React.Component {
+
+
 
   getStarsContent = nstars => {
     let starsContent = [];
@@ -51,6 +62,7 @@ export default class Card extends React.Component {
   render() {
     return (
     <div>   
+      <TinderCard  onSwipe={onSwipe} onCardLeftScreen={()=> onCardLeftScreen()} preventSwipe={[`up`, `down`]} >
       <div style={{ width: this.props.width + "px" }}>
         <div style={styleCard}>
           <div style={styleImage}>
@@ -76,6 +88,7 @@ export default class Card extends React.Component {
           </div>
         </div>
       </div>
+      </TinderCard>
     </div>  
     );
   }
@@ -88,3 +101,6 @@ Card.defaultProps = {
   description: "Template description textbox",
   icon: "icon"
 };
+
+
+

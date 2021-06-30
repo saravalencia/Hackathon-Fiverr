@@ -1,12 +1,7 @@
-import React, {useState, useContext} from 'react';
-import gifnoloop from '../../video/gifnoloop.gif'
+import React, {useState} from 'react';
+
 import styled from 'styled-components'
-import { ApiContext } from '../../context/ApiContext';
-
-
-
-
-   
+import gifTransparent from '../../video/gifTransparent.gif'
 
 const H2 = styled.h1`
 border: none;
@@ -14,6 +9,7 @@ border: none;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   font-size: 2.3rem;
+  text-shadow: 3px 3px 6px rgba(150, 150, 150, 1);
 
   @media screen and (max-width: 700px){
         
@@ -45,10 +41,9 @@ const Button = styled.button`
   border-radius: 4px;
   margin-top: 2rem;
   max-width:800px;
+}
 
-
-
-  &:hover {
+&:hover {
   background: #fff;
   box-shadow: 0px 2px 10px 5px #1abc9c;
   color: #000;
@@ -75,16 +70,14 @@ const Button = styled.button`
 }
 
 &:focus { outline:0; }
-@media screen and (max-width: 700px){
-
-
-}
-`;
 
 
 
-const Div = styled.div`
-position:relative;
+
+    `;
+
+    const Div = styled.div`
+    position:relative;
 	margin:auto;
 	width:100%;
 	height:100%;
@@ -95,7 +88,9 @@ position:relative;
     align-content: center;
     justify-content: center;
     align-items: center;
+  
     
+
     `;
 
 const Image = styled.img`
@@ -108,13 +103,20 @@ const ImageWrapper = styled.div`
 width: 100%;
 max-width:1000px;
 
+@media screen and (min-height: 700px){
+
+ 
+
+}
+
 `;
 
+const Div2 = styled.div`
+background: linear-gradient(0deg, rgba(158,208,255,1) 0%, rgba(213,255,226,1) 100%);
+min-height: 100vh;
+`
 
-function Questions() {
-
-  const context = useContext(ApiContext);
-  console.log(context.freelancer)
+function Questions(props) {
 
   const questions = [
 		{
@@ -158,12 +160,9 @@ function Questions() {
 			answerOptions: [
 				{ answerText: 'UX UI' },
 				{ answerText: 'Animation' },
-
 				{ answerText: 'E-commerce' },
 				{ answerText: 'CMS systems' },
-        { answerText: 'Chat managment' },
-        { answerText: 'FinTech' },
-        { answerText: 'Websites' },
+        
 			],
 		},
    
@@ -177,14 +176,20 @@ function Questions() {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion)
-    
+    }
+    else{
+      props.history.push({
+        pathname: "/matches"
+        
+      }) 
     }
   }
 
     return (
+      <Div2>
       <Div>
         <ImageWrapper>
-        <Image src={gifnoloop}  alt='gif'></Image>
+        <Image src={gifTransparent}  alt='gif'></Image>
         </ImageWrapper>
          
          
@@ -196,8 +201,10 @@ function Questions() {
           
        
       </Div>
+      </Div2>
     );
   }
   
   export default Questions;
+  
   

@@ -79,5 +79,5 @@ function Cards() {
 }
 
 export default Cards;
-//const rootElement = document.getElementById("root");
-//ReactDOM.render(<Cards />, rootElement);
+
+

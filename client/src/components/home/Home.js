@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import gifTransparent from '../../video/gifTransparent.gif'
 import home from '../home/background.jpg'
-import { useHistory, Link } from 'react-router-dom';
-import { ApiContext } from '../../context/ApiContext';
+
+
 
 
 
@@ -14,20 +14,16 @@ background-repeat: no-repeat;
 background-position: center;
 width: 100%;
 height: 100vh;
-
-
  @media screen and (max-width: 700px){
         width: 100%;
        
         align-items: center;
     }
-
 `;
 
 const ImgLogo = styled.img `
     width: 501px;
     height: 274px;
-
  @media screen and (max-width: 700px){
         width: 269px;
         height: 163px;
@@ -44,7 +40,6 @@ const DivContainerButtom = styled.div `
 display: flex;
 justify-content: center;
 align-items: center;
-
 @media screen and (max-width: 700px){
     display: flex;
     flex-direction: column;
@@ -59,7 +54,6 @@ font-family: 'Josefin Sans',sans-serif;
 font-size: 6rem;
 background-color: rgb(220 219 219 / 50%);
 text-align: center;
-
 @media screen and (max-width: 700px){
   padding: 8px;
   font-family: 'Josefin Sans', sans-serif;
@@ -68,7 +62,6 @@ text-align: center;
   text-align: center;
   width: 80%;
     }
-
 `
 
 
@@ -85,7 +78,6 @@ transition: all 0.3s;
 position: relative;
 cursor: pointer;
 font-family: 'Josefin Sans',sans-serif;
-
 &:after{
   content: "";
   width: 50px;
@@ -99,7 +91,6 @@ font-family: 'Josefin Sans',sans-serif;
   top:0;
   transition: all 0.2s;
 }
-
 &:before{
   content: "";
   width: 50px;
@@ -113,17 +104,14 @@ font-family: 'Josefin Sans',sans-serif;
   top: -1;
   transition: all 0.2s;
 }
-
 &:hover:after{
   width: 340px;
   height: 90px;
 }
-
 &:hover:before{
   width: 340px;
   height: 90px;
 }
-
 @media screen and (max-width: 700px){
 margin: 8px;
 width: 205px;
@@ -137,7 +125,6 @@ transition: all 0.3s;
 position: relative;
 cursor: pointer;
 font-family: 'Josefin Sans',sans-serif;
-
 &:after{
   content: "";
   width: 50px;
@@ -151,7 +138,6 @@ font-family: 'Josefin Sans',sans-serif;
   top:0;
   transition: all 0.2s;
 }
-
 &:before{
   content: "";
   width: 50px;
@@ -165,12 +151,10 @@ font-family: 'Josefin Sans',sans-serif;
   top: -1;
   transition: all 0.2s;
 }
-
 &:hover:after{
   width: 220px;
   height: 55px;
 }
-
 &:hover:before{
   width: 220px;
   height: 55px;
@@ -181,9 +165,25 @@ font-family: 'Josefin Sans',sans-serif;
  
 
 
-function Home() {
-  const context = useContext(ApiContext);
-  console.log(context.freelancer)
+function Home(props) {
+  
+  const handleButtonFreelance=()=>{
+    props.history.push({
+      pathname: "/questions-freelancer"
+      
+    })
+    
+
+  }
+
+  const handleButtonClient=()=>{
+    props.history.push({
+      pathname: "/questions"
+      
+    })
+    
+    
+  }
 
 
 
@@ -202,8 +202,8 @@ function Home() {
         <DivContainerButtom>        
             
           
-        <Button ><Link style={{textDecoration:'none', color:'black'}} to="/questions-freelancer">Freelancer</Link> </Button>
-        <Button><Link  style={{textDecoration:'none', color:'black'}} to="/questions"> Client </Link>  </Button>
+        <Button onClick={handleButtonFreelance}>Freelancer</Button>
+        <Button onClick={handleButtonClient}>Client</Button>
          
         </DivContainerButtom>
       
