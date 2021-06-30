@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import gifnoloop from '../../video/gifnoloop.gif'
 import styled from 'styled-components'
 import gifTransparent from '../../video/gifTransparent.gif'
 
