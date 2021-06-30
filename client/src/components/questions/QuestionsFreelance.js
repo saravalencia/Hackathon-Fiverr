@@ -91,7 +91,7 @@ const Button = styled.button`
     align-content: center;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, rgba(158,208,255,1) 0%, rgba(213,255,226,1) 100%);
+  
     
     `;
 
@@ -106,6 +106,11 @@ width: 100%;
 max-width:1000px;
 
 `;
+
+const Div2 = styled.div`
+background: linear-gradient(0deg, rgba(158,208,255,1) 0%, rgba(213,255,226,1) 100%);
+min-height: 100vh;
+`
 
 
 function QuestionsFreelance(props) {
@@ -232,6 +237,7 @@ function QuestionsFreelance(props) {
   }
 
     return (
+      <Div2>
       <Div>
         <ImageWrapper>
         <Image src={gifTransparent}  alt='gif'></Image>
@@ -246,6 +252,7 @@ function QuestionsFreelance(props) {
           
        
       </Div>
+      </Div2>
     );
   }
   

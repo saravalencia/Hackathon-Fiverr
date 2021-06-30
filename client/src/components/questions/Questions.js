@@ -71,10 +71,7 @@ const Button = styled.button`
 
 &:focus { outline:0; }
 
-@media screen and (max-width: 700px){
 
-
-}
 
 
     `;
@@ -92,7 +89,7 @@ const Button = styled.button`
     justify-content: center;
     align-items: center;
   
-    background: linear-gradient(0deg, rgba(158,208,255,1) 0%, rgba(213,255,226,1) 100%);
+    
 
     `;
 
@@ -106,8 +103,18 @@ const ImageWrapper = styled.div`
 width: 100%;
 max-width:1000px;
 
+@media screen and (min-height: 700px){
+
+ 
+
+}
+
 `;
 
+const Div2 = styled.div`
+background: linear-gradient(0deg, rgba(158,208,255,1) 0%, rgba(213,255,226,1) 100%);
+min-height: 100vh;
+`
 
 function Questions(props) {
 
@@ -179,6 +186,7 @@ function Questions(props) {
   }
 
     return (
+      <Div2>
       <Div>
         <ImageWrapper>
         <Image src={gifTransparent}  alt='gif'></Image>
@@ -193,6 +201,7 @@ function Questions(props) {
           
        
       </Div>
+      </Div2>
     );
   }
   
