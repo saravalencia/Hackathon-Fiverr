@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Questions from "./components/questions/Questions";
 import QuestionsFreelance from "./components/questions/QuestionsFreelance";
 
+import Cards from "./components/Cards/Cards";
 
 
 function App()  {
@@ -42,6 +43,12 @@ function App()  {
                       <QuestionsFreelance {...props} />
                     }
                 />
+                 <Route
+              path="/matches"
+              render={props =>
+                <Cards {...props} />
+              }              
+          />
                
             </Switch>
             

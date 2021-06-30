@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import gifnoloop from '../../video/gifnoloop.gif'
+
 import styled from 'styled-components'
+import gifTransparent from '../../video/gifTransparent.gif'
 
 const H2 = styled.h1`
 border: none;
@@ -8,6 +9,7 @@ border: none;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   font-size: 2.3rem;
+  text-shadow: 3px 3px 6px rgba(150, 150, 150, 1);
 
   @media screen and (max-width: 700px){
         
@@ -89,7 +91,9 @@ const Button = styled.button`
     align-content: center;
     justify-content: center;
     align-items: center;
-    
+  
+    background: linear-gradient(0deg, rgba(158,208,255,1) 0%, rgba(213,255,226,1) 100%);
+
     `;
 
 const Image = styled.img`
@@ -105,7 +109,7 @@ max-width:1000px;
 `;
 
 
-function Questions() {
+function Questions(props) {
 
   const questions = [
 		{
@@ -151,9 +155,7 @@ function Questions() {
 				{ answerText: 'Animation' },
 				{ answerText: 'E-commerce' },
 				{ answerText: 'CMS systems' },
-        { answerText: 'Chat managment' },
-        { answerText: 'FinTech' },
-        { answerText: 'Websites' },
+        
 			],
 		},
    
@@ -167,14 +169,19 @@ function Questions() {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion)
-    
+    }
+    else{
+      props.history.push({
+        pathname: "/matches"
+        
+      }) 
     }
   }
 
     return (
       <Div>
         <ImageWrapper>
-        <Image src={gifnoloop}  alt='gif'></Image>
+        <Image src={gifTransparent}  alt='gif'></Image>
         </ImageWrapper>
          
          
